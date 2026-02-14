@@ -4,93 +4,164 @@
   <meta charset="UTF-8">
   <title>Своя логистика — Партнёрство в транспортной логистике</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Партнёрская модель транспортной логистики. Снижение затрат на 5–15%. Управляемая система, прозрачная аналитика, выход на новые рынки.">
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Arial, sans-serif; }
-    body { background:#f8f9fb; color:#1c1c1c; line-height:1.6; }
+    * { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+      font-family:'Segoe UI', Arial, sans-serif; 
+      color:#000; /* ВЕСЬ ТЕКСТ ЧЁРНЫЙ */
+    }
+
+    body { 
+      background:#f8f9fb; 
+      line-height:1.6; 
+    }
 
     header{
-      background: linear-gradient(rgba(10,20,40,0.86), rgba(10,20,40,0.86)),
-        url('https://images.unsplash.com/photo-1501706362039-c6b2a7b3a5df?auto=format&fit=crop&w=1920&q=80') center/cover;
-      color:#fff; padding:115px 20px; text-align:center;
+      background:#ffffff;
+      padding:100px 20px;
+      text-align:center;
+      border-bottom:1px solid #e5e5e5;
     }
-    header h1{ font-size:46px; margin-bottom:18px; letter-spacing:0.2px; }
-    header p{ font-size:20px; margin-bottom:18px; opacity:0.95; }
-    .slogan{ font-size:22px; font-weight:700; color:#c7a34f; margin:18px 0 32px; }
+
+    header h1{ 
+      font-size:44px; 
+      margin-bottom:20px; 
+      font-weight:700;
+    }
+
+    header p{ 
+      font-size:20px; 
+      margin-bottom:20px; 
+    }
+
+    .slogan{
+      font-size:22px;
+      font-weight:700;
+      margin-bottom:30px;
+    }
 
     .btn{
-      display:inline-block; padding:14px 32px; background:#c7a34f; color:#fff;
-      text-decoration:none; border-radius:6px; font-weight:800; transition:0.25s;
+      display:inline-block; 
+      padding:14px 32px; 
+      background:#000; 
+      color:#fff; 
+      text-decoration:none; 
+      border-radius:6px; 
+      font-weight:700; 
+      transition:0.3s;
     }
-    .btn:hover{ background:#a9883c; transform: translateY(-1px); }
 
-    section{ padding:64px 20px; max-width:1100px; margin:auto; }
-    h2{ font-size:30px; margin-bottom:22px; color:#0f1f3d; }
+    .btn:hover{ 
+      background:#333; 
+    }
+
+    section{ 
+      padding:70px 20px; 
+      max-width:1100px; 
+      margin:auto; 
+    }
+
+    h2{ 
+      font-size:30px; 
+      margin-bottom:25px; 
+      font-weight:700;
+    }
 
     .grid{
-      display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;
-      margin-top:18px;
+      display:grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap:20px;
+      margin-bottom:30px;
     }
-    .card{
-      background:#fff; border-radius:12px; padding:18px 18px;
-      border:1px solid #e8ecf4; box-shadow: 0 8px 20px rgba(12, 22, 45, 0.06);
-    }
-    .card b{ display:block; color:#0f1f3d; margin-bottom:6px; }
-    .card p{ color:#3a3a3a; font-size:15.5px; }
 
-    ul{ list-style:none; margin-top:10px; }
-    ul li{ margin-bottom:12px; padding-left:20px; position:relative; }
-    ul li::before{ content:"•"; position:absolute; left:0; color:#c7a34f; font-weight:900; }
+    .card{
+      background:#ffffff; 
+      border:1px solid #e5e5e5;
+      border-radius:10px; 
+      padding:20px;
+    }
+
+    .card b{ 
+      display:block; 
+      margin-bottom:8px; 
+      font-size:18px;
+    }
+
+    ul{ 
+      list-style:none; 
+      margin-top:15px; 
+    }
+
+    ul li{ 
+      margin-bottom:12px; 
+      padding-left:20px; 
+      position:relative; 
+    }
+
+    ul li::before{ 
+      content:"•"; 
+      position:absolute; 
+      left:0; 
+      font-weight:900; 
+    }
 
     .highlight{
-      background:#eef1f6; padding:42px; border-radius:14px;
-      border:1px solid #e2e7f1;
-    }
-    .kpi{
-      display:flex; gap:14px; flex-wrap:wrap; margin:18px 0 6px;
-    }
-    .pill{
-      background:#fff; border:1px solid #e2e7f1; color:#0f1f3d;
-      padding:10px 14px; border-radius:999px; font-weight:700; font-size:14px;
+      background:#f0f0f0; 
+      padding:40px; 
+      border-radius:10px;
     }
 
-    /* Усиленный CTA */
     .cta{
-      text-align:center; background:#0f1f3d; color:#fff;
-      padding:78px 20px; margin-top:30px;
+      background:#ffffff;
+      border-top:2px solid #000;
+      text-align:center;
+      padding:80px 20px;
     }
-    .cta .wrap{ max-width:900px; margin:0 auto; }
-    .cta h2{ color:#fff; font-size:34px; margin-bottom:18px; }
-    .cta .big{
-      font-size:22px; font-weight:800; margin-bottom:22px;
-      color:#c7a34f;
-    }
-    .cta .desc{
-      font-size:18px; line-height:1.75; opacity:0.95;
-      margin:0 auto 26px auto;
-    }
-    .cta .contacts{
-      font-size:20px; margin-bottom:28px; display:flex; gap:18px;
-      justify-content:center; flex-wrap:wrap;
-    }
-    .cta .contacts a{
-      color:#c7a34f; text-decoration:none; font-weight:900;
-      padding:10px 14px; border:1px solid rgba(199,163,79,0.35);
-      border-radius:10px; display:inline-block;
-    }
-    .cta .contacts a:hover{ text-decoration:underline; }
-    .cta .note{ margin-top:22px; font-size:14.5px; opacity:0.85; }
 
-    footer{ background:#111; color:#aaa; text-align:center; padding:22px; font-size:14px; }
+    .cta h2{
+      font-size:34px;
+      margin-bottom:20px;
+      font-weight:800;
+    }
+
+    .cta .big{
+      font-size:22px;
+      font-weight:800;
+      margin-bottom:25px;
+    }
+
+    .cta .desc{
+      font-size:18px;
+      margin-bottom:30px;
+      max-width:800px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .contacts{
+      font-size:20px;
+      margin-bottom:30px;
+    }
+
+    .contacts a{
+      text-decoration:none;
+      font-weight:800;
+    }
+
+    footer{ 
+      background:#ffffff; 
+      border-top:1px solid #e5e5e5;
+      text-align:center; 
+      padding:25px; 
+      font-size:14px; 
+    }
 
     @media (max-width: 900px){
       .grid{ grid-template-columns:1fr; }
-      header h1{ font-size:30px; }
-      header p{ font-size:16px; }
-      .slogan{ font-size:18px; }
-      h2{ font-size:26px; }
-      .cta h2{ font-size:28px; }
+      header h1{ font-size:28px; }
     }
   </style>
 </head>
@@ -98,97 +169,77 @@
 
 <header>
   <h1>Своя логистика — мы делаем больше</h1>
-  <p>Партнёрская модель транспортной логистики: снижаем затраты и расширяем рынки сбыта.</p>
-  <div class="slogan">Вам нужно сделать всего один звонок — остальное мы берём на себя.</div
+  <p>Партнёрская модель транспортной логистики: снижение затрат и расширение рынков.</p>
+  <div class="slogan">Вам нужно сделать всего один звонок — остальное мы берём на себя.</div>
+  <a href="#contact" class="btn">Связаться с нами</a>
+</header>
 
 <section>
   <h2>Формат партнёрства</h2>
   <div class="grid">
     <div class="card">
       <b>Единая управляемая система</b>
-      <p>Логистика выстраивается как единый процесс: планирование, контроль, исполнение и аналитика.</p>
+      Логистика выстраивается как единый процесс управления.
     </div>
     <div class="card">
       <b>Единый центр ответственности</b>
-      <p>Мы отвечаем за перевозки «под ключ» и управляем качеством сервиса на каждом этапе.</p>
+      Мы полностью отвечаем за перевозки и результат.
     </div>
     <div class="card">
       <b>Фиксированный формат оплаты</b>
-      <p>Ежемесячная абонентская плата с понятной стоимостью и прогнозируемым бюджетом.</p>
+      Прозрачная ежемесячная абонентская модель.
     </div>
   </div>
 
   <ul>
-    <li>Прозрачная аналитика, KPI и регулярная отчётность</li>
-    <li>Контроль тарифов и исключение переплат</li>
-    <li>Сопровождение перевозок и управление рисками</li>
+    <li>Прозрачная аналитика и KPI</li>
+    <li>Контроль тарифов</li>
+    <li>Сопровождение перевозок</li>
   </ul>
 </section>
 
 <section class="highlight">
   <h2>Экономический эффект</h2>
-  <p style="font-size:18px; margin-bottom:10px;">
-    <strong>Снижение логистических затрат на 5–15%</strong> за счёт системного управления перевозками.
-  </p>
-
-  <div class="kpi">
-    <div class="pill">Маршруты и загрузка</div>
-    <div class="pill">Минус простои</div>
-    <div class="pill">Минус холостые пробеги</div>
-    <div class="pill">Контроль тарифов</div>
-    <div class="pill">Входящая логистика</div>
-    <div class="pill">Планирование поставок</div>
-  </div>
-
+  <p><strong>Снижение логистических затрат на 5–15%</strong></p>
   <ul>
-    <li>Оптимизация маршрутов и загрузки транспорта</li>
-    <li>Сокращение простоев и холостых пробегов</li>
-    <li>Контроль тарифов и исключение переплат</li>
-    <li>Управление входящим потоком товара и снижение стоимости входящей логистики</li>
-    <li>Снижение себестоимости продукции за счёт эффективной доставки</li>
-    <li>Повышение качества планирования поставок</li>
+    <li>Оптимизация маршрутов</li>
+    <li>Сокращение простоев</li>
+    <li>Управление входящей логистикой</li>
+    <li>Снижение себестоимости продукции</li>
   </ul>
 </section>
 
 <section>
   <h2>Рост и развитие бизнеса</h2>
   <ul>
-    <li>Выход на <strong>новые рынки сбыта</strong></li>
-    <li>Расширение географии продаж без роста внутренних издержек</li>
-    <li>Повышение скорости доставки и уровня клиентского сервиса</li>
-    <li>Управляемая логистика как инструмент масштабирования</li>
+    <li>Выход на новые рынки сбыта</li>
+    <li>Расширение географии продаж</li>
+    <li>Повышение скорости доставки</li>
   </ul>
 </section>
 
 <section>
-  <h2>Кадровая и операционная разгрузка</h2>
+  <h2>Кадровая разгрузка</h2>
   <ul>
-    <li>Не требуется формировать собственную логистическую команду</li>
-    <li>Полное закрытие функции логистики «под ключ»</li>
-    <li>Круглосуточное сопровождение перевозок</li>
-    <li>Берём кадровые, операционные и управленческие риски</li>
+    <li>Логистика «под ключ»</li>
+    <li>Круглосуточное сопровождение</li>
+    <li>Минимизация управленческих рисков</li>
   </ul>
 </section>
 
 <section class="cta" id="contact">
-  <div class="wrap">
-    <h2>Стратегическое партнёрство. Измеримый результат.</h2>
+  <h2>Стратегическое партнёрство. Измеримый результат.</h2>
+  <div class="big">Один звонок — и логистика начинает работать на ваш бизнес.</div>
+  <p class="desc">
+    Мы выстраиваем систему, снижаем затраты и берём ответственность за результат.
+  </p>
 
-    <div class="big">Вам нужно сделать всего один звонок — остальное мы берём на себя.</div>
-
-    <p class="desc">
-      Мы выстраиваем управляемую систему логистики, снижаем издержки, улучшаем качество доставки
-      и помогаем масштабировать продажи за счёт выхода на новые рынки.  
-      <strong>Ответственность за результат — на нас.</strong>
-    </p>
-
-    <div class="contacts">
-      <a href="tel:+79991234567">📞 +7 (999) 123-45-67</a>
-      <a href="mailto:info@yourcompany.ru">📩 info@yourcompany.ru</a>
-    </div>
-
-    <div class="note">Консультация и первичный анализ логистики — бесплатно.</div>
+  <div class="contacts">
+    📞 <a href="tel:+79991234567">+7 (999) 123-45-67</a> <br><br>
+    📩 <a href="mailto:info@yourcompany.ru">info@yourcompany.ru</a>
   </div>
+
+  <a class="btn" href="tel:+79991234567">Сделать один звонок</a>
 </section>
 
 <footer>
@@ -197,4 +248,3 @@
 
 </body>
 </html>
-
